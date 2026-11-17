@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arté — Restaurante Interactivo | Museo Arocena (Torreón)</title>
+
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Arté es la experiencia culinaria y sensorial dentro del Museo Arocena en Torreón. Alta gastronomía inspirada en exposiciones artísticas temporales y virreinales." />
+  <meta name="keywords" content="Restaurante Museo Arocena, Arté Torreón, restaurantes en Torreón, gastronomía y arte, alta cocina Coahuila, Centro Histórico Torreón" />
+  <meta property="og:title" content="Arté — Una experiencia para los sentidos | Museo Arocena" />
+  <meta property="og:description" content="El arte también se disfruta a la mesa. Descubre menús inspirados en las colecciones del Museo Arocena en Torreón." />
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Schema.org JSON-LD Structured Data for Local SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Arté - Restaurante Interactivo Museo Arocena",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Cepeda 354, Centro Histórico",
+      "addressLocality": "Torreón",
+      "addressRegion": "Coahuila",
+      "postalCode": "27000",
+      "addressCountry": "MX"
+    },
+    "servesCuisine": ["Mexicana Contemporánea", "Cocina de Autor", "Maridaje con Arte"],
+    "priceRange": "$$$",
+    "telephone": "+528711234567"
+  }
+  </script>
+
+  <!-- Tailwind CSS Play CDN & Custom Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            canvas: '#FAF8F5',
+            'canvas-pure': '#FFFFFF',
+            charcoal: '#181716',
+            'charcoal-light': '#2A2826',
+            terracotta: '#B85D3B',
+            'terracotta-dark': '#96472A',
+            gold: '#C5A059',
+            'gold-light': '#DFC287',
+            olive: '#4A5840',
+            stoneBorder: '#E6E2DC'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            editorial: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS Stylesheet with Cache Busting -->
+  <link rel="stylesheet" href="styles.css?v=3" />
+</head>
+
+<body class="bg-canvas text-charcoal font-sans antialiased overflow-x-hidden selection:bg-terracotta selection:text-white">
+
+  <!-- ========================================================================
+       TOP ANNOUNCEMENT BAR
+       ======================================================================== -->
+  <aside class="bg-terracotta text-white text-xs py-2.5 px-4 text-center tracking-wider border-b border-stone-900 shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
+      <span class="inline-block w-2.5 h-2.5 rounded-full bg-white animate-pulse"></span>
+      <span><strong>Actualización:</strong> Imágenes integradas en Paquetes Especiales, 4 Dimensiones, Concierge y Reservaciones.</span>
+      <a href="#paquetes" class="underline ml-2 text-gold-light hover:text-white font-bold transition-colors">Ver Paquetes</a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       STICKY NAVBAR
+       ======================================================================== -->
+  <header id="main-navbar" class="sticky top-0 z-40 w-full glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo Branding -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full border border-terracotta flex items-center justify-center bg-white shadow-sm group-hover:border-gold transition-colors">
+          <span class="font-serif text-xl font-bold text-terracotta group-hover:text-gold transition-colors">A</span>
+        </div>
+        <div>
+          <div class="font-serif text-2xl font-bold tracking-tight text-charcoal flex items-center gap-1.5">
+            ARTÉ
+            <span class="text-xs font-sans font-medium px-1.5 py-0.5 rounded bg-terracotta/10 text-terracotta uppercase tracking-widest">Torreón</span>
+          </div>
+          <p class="text-[10px] tracking-widest uppercase text-stone-500 font-medium">Museo Arocena</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-700">
+        <a href="#concepto" class="hover:text-terracotta transition-colors">El Concepto</a>
+        <a href="#experiencia" class="hover:text-terracotta transition-colors">Experiencia</a>
+        <a href="#menu" class="hover:text-terracotta transition-colors">Menú</a>
+        <a href="#eventos" class="hover:text-terracotta transition-colors">Eventos</a>
+        <a href="#paquetes" class="hover:text-terracotta transition-colors">Paquetes</a>
+        <a href="#ubicacion" class="hover:text-terracotta transition-colors">Ubicación</a>
+        <a href="#faq" class="hover:text-terracotta transition-colors">FAQ</a>
+      </nav>
+
+      <!-- Desktop CTAs -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a 
+          href="https://wa.me/528711234567?text=Hola,%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Art%C3%A9%20en%20Museo%20Arocena" 
+          target="_blank"
+          class="p-2.5 rounded-full border border-stone-300 text-stone-700 hover:text-green-700 hover:border-green-600 transition-colors"
+          title="Atención vía WhatsApp"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        </a>
+        <a 
+          href="#reservaciones" 
+          class="px-5 py-2.5 rounded-full bg-charcoal text-white font-medium text-sm hover:bg-terracotta transition-all shadow-sm hover:shadow-md"
+        >
+          Reservar Mesa
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-toggle" type="button" class="md:hidden p-2 text-stone-700 hover:text-charcoal focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div id="mobile-menu" class="hidden-drawer fixed inset-0 z-50 bg-canvas/98 backdrop-blur-xl flex flex-col justify-between p-8 md:hidden">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-stone-200">
+        <div class="font-serif text-2xl font-bold tracking-tight text-charcoal">
+          ARTÉ <span class="text-xs text-terracotta font-sans uppercase">Museo Arocena</span>
+        </div>
+        <button id="mobile-menu-close" type="button" class="p-2 text-stone-600 hover:text-charcoal">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <nav class="mt-8 flex flex-col gap-6 text-xl font-serif">
+        <a href="#concepto" class="mobile-nav-link text-stone-800 hover:text-terracotta">El Concepto</a>
+        <a href="#experiencia" class="mobile-nav-link text-stone-800 hover:text-terracotta">La Experiencia</a>
+        <a href="#menu" class="mobile-nav-link text-stone-800 hover:text-terracotta">Menú de Temporada</a>
+        <a href="#eventos" class="mobile-nav-link text-stone-800 hover:text-terracotta">Eventos & Noches Especiales</a>
+        <a href="#paquetes" class="mobile-nav-link text-stone-800 hover:text-terracotta">Paquetes Museo + Mesa</a>
+        <a href="#ubicacion" class="mobile-nav-link text-stone-800 hover:text-terracotta">Ubicación & Acceso</a>
+        <a href="#faq" class="mobile-nav-link text-stone-800 hover:text-terracotta">Preguntas Frecuentes</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-stone-200 flex flex-col gap-3">
+      <a href="#reservaciones" class="mobile-nav-link w-full py-3.5 text-center rounded-xl bg-terracotta text-white font-medium text-base shadow-md">
+        Solicitar Reservación
+      </a>
+      <a href="https://wa.me/528711234567" target="_blank" class="w-full py-3 text-center rounded-xl border border-stone-300 text-stone-700 font-medium text-sm flex items-center justify-center gap-2">
+        <span>Atención en WhatsApp</span>
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========================================================================
+         HERO SECTION (High Impact & Immersion)
+         ======================================================================== -->
+    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-charcoal text-white">
+      <!-- Background Image with Cinematic Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=85" 
+          alt="Atmósfera gastronómica y artística en Arté Museo Arocena" 
+          class="w-full h-full object-cover opacity-35 scale-105 transition-transform duration-1000"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/70 to-charcoal/40"></div>
+      </div>
+
+      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/40 bg-stone-900/60 backdrop-blur-md mb-8">
+          <span class="w-2 h-2 rounded-full bg-gold"></span>
+          <span class="text-xs uppercase tracking-widest text-gold-light font-medium">Restaurante Interactivo • Museo Arocena</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-canvas leading-[1.1] mb-6">
+          El arte también se disfruta <span class="italic font-normal text-gold-light">a la mesa.</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="max-w-2xl mx-auto text-lg sm:text-xl text-stone-300 font-light leading-relaxed mb-10">
+          Una propuesta culinaria multisensorial en Torreón donde cada platillo, textura y copa dialogan con las exposiciones históricas y contemporáneas del museo.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a 
+            href="#reservaciones" 
+            class="w-full sm:w-auto px-8 py-4 rounded-full bg-terracotta hover:bg-terracotta-dark text-white font-medium text-base tracking-wide transition-all duration-300 shadow-lg hover:shadow-terracotta/30 flex items-center justify-center gap-2 group"
+          >
+            <span>Explorar Experiencia & Reservar</span>
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+          <a 
+            href="#menu" 
+            class="w-full sm:w-auto px-8 py-4 rounded-full border border-stone-400/60 hover:border-canvas text-canvas font-medium text-base tracking-wide transition-colors bg-white/5 hover:bg-white/10 backdrop-blur-sm"
+          >
+            Descubrir el Menú
+          </a>
+        </div>
+
+        <!-- Quick Proof Highlights -->
+        <div class="mt-16 pt-8 border-t border-stone-700/60 grid grid-cols-2 sm:grid-cols-4 gap-6 text-left max-w-4xl mx-auto">
+          <div>
+            <p class="text-2xl font-serif font-bold text-gold">4</p>
+            <p class="text-xs text-stone-400 mt-1 uppercase tracking-wider">Menús al año por exposición</p>
+          </div>
+          <div>
+            <p class="text-2xl font-serif font-bold text-gold">100%</p>
+            <p class="text-xs text-stone-400 mt-1 uppercase tracking-wider">Inspiración artística en sala</p>
+          </div>
+          <div>
+            <p class="text-2xl font-serif font-bold text-gold">1904</p>
+            <p class="text-xs text-stone-400 mt-1 uppercase tracking-wider">Patrimonio del Museo Arocena</p>
+          </div>
+          <div>
+            <p class="text-2xl font-serif font-bold text-gold">Centro</p>
+            <p class="text-xs text-stone-400 mt-1 uppercase tracking-wider">Histórico de Torreón</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECCIÓN 2: EL CONCEPTO (Storytelling & Manifiesto)
+         ======================================================================== -->
+    <section id="concepto" class="py-24 bg-canvas bg-canvas-textured relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Columna Izquierda: Manifiesto Editorial -->
+          <div class="lg:col-span-7">
+            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">El Concepto</span>
+            <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal mt-2 mb-6 leading-tight">
+              Más que un restaurante, una experiencia para descubrir.
+            </h2>
+            <div class="space-y-4 text-stone-700 text-base sm:text-lg leading-relaxed">
+              <p>
+                Imagina saborear una cena inspirada en los pigmentos y claroscuros de una pintura virreinal, descubrir matices botánicos relacionados con una escultura y compartir una sobremesa donde cada rincón cuenta una historia.
+              </p>
+              <p>
+                Nacido de la alianza entre el emblemático <strong>Museo Arocena</strong> y la alta gastronomía lagunera, <em>Arté</em> transforma la visita al museo en una experiencia social, contemporánea e inolvidable.
+              </p>
+              <p class="text-stone-900 font-medium italic border-l-2 border-terracotta pl-4 py-1">
+                "En nuestro restaurante, el arte no solamente se contempla desde lejos: se prueba, se comparte y se vive con todos los sentidos."
+              </p>
+            </div>
+
+            <!-- Features bullets -->
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-terracotta/10 text-terracotta flex items-center justify-center shrink-0 mt-1">
+                  ✓
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-stone-900">Platillos con Narrativa</h4>
+                  <p class="text-xs text-stone-600">Fichas de maridaje que explican la obra pictórica que inspiró la receta.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-terracotta/10 text-terracotta flex items-center justify-center shrink-0 mt-1">
+                  ✓
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-stone-900">Espacio para Compartir</h4>
+                  <p class="text-xs text-stone-600">Ambiente diseñado para cenas de amigos, citas en pareja y sobremesas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Composición Visual Editorial de Arte & Restaurante -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              <!-- Marco Principal: Salón y Restaurante Museo Arocena -->
+              <div class="rounded-3xl overflow-hidden shadow-2xl border border-stone-200 bg-white p-3 group">
+                <div class="relative h-[440px] overflow-hidden rounded-2xl">
+                  <img 
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85" 
+                    alt="Restaurante y velada gastronómica en el Museo Arocena" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-transparent"></div>
+                  
+                  <!-- Badge sobre la imagen -->
+                  <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-lg border border-stone-200">
+                    <span class="text-[11px] font-bold text-stone-900 uppercase tracking-widest flex items-center gap-1.5">
+                      <span class="w-2 h-2 rounded-full bg-terracotta"></span>
+                      Restaurante & Arquitectura Histórica
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mini-marco flotante superior: Gastronomía de Autor -->
+              <div class="absolute -top-6 -right-4 sm:-right-6 w-36 sm:w-44 bg-white p-2 rounded-2xl shadow-xl border border-stone-200 hidden sm:block rotate-2 hover:rotate-0 transition-transform">
+                <img 
+                  src="https://images.unsplash.com/photo-1546241072-48010ad2862c?auto=format&fit=crop&w=500&q=80" 
+                  alt="Alta cocina y maridaje de autor" 
+                  class="w-full h-28 object-cover rounded-xl"
+                />
+                <p class="text-[9px] font-bold uppercase tracking-wider text-stone-700 text-center mt-1.5">Cocina & Maridaje</p>
+              </div>
+
+              <!-- Card Flotante (Inspiración Faena Quote) -->
+              <div class="absolute -bottom-8 -left-4 sm:-left-8 bg-charcoal text-white p-6 rounded-2xl shadow-2xl max-w-xs border border-stone-700/80 hidden sm:block">
+                <p class="font-editorial italic text-lg leading-snug text-gold-light">
+                  "El sabor es la forma más íntima de recordar el arte."
+                </p>
+                <div class="mt-3 flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-terracotta flex items-center justify-center font-bold text-xs text-white">MA</div>
+                  <div>
+                    <p class="text-xs font-semibold">Museo Arocena</p>
+                    <p class="text-[10px] text-stone-400">Torreón, Coahuila</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECCIÓN 3: UNA EXPERIENCIA DIFERENTE (Los 4 Pilares)
+         ======================================================================== -->
+    <section id="experiencia" class="py-20 bg-white border-y border-stone-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Experiencia Sensorial</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal mt-2">
+            Cuatro dimensiones para disfrutar
+          </h2>
+          <p class="text-stone-600 mt-3 text-base">
+            Cada visita articula cocina de vanguardia con la atmósfera única del museo más emblemático de La Laguna.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <!-- Pilar 1: Gastronomía de Autor -->
+          <div class="rounded-3xl bg-canvas border border-stone-200/90 hover:border-terracotta hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col justify-between group">
+            <div>
+              <div class="relative h-52 w-full overflow-hidden bg-stone-100">
+                <img 
+                  src="https://images.unsplash.com/photo-1546241072-48010ad2862c?auto=format&fit=crop&w=800&q=80" 
+                  alt="Gastronomía de autor concebida como escultura" 
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-3 left-4 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 text-stone-900 shadow-md">
+                  Alta Cocina & Escultura
+                </span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-serif text-2xl font-bold text-charcoal mb-2 group-hover:text-terracotta transition-colors">Gastronomía de Autor</h3>
+                <p class="text-sm text-stone-600 leading-relaxed">
+                  Platillos de alta cocina mexicana y contemporánea, con recetas y emplatados concebidos como composiciones plásticas de texturas y óleos comestibles.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2 border-t border-stone-200/60 flex items-center justify-between text-xs font-semibold text-terracotta uppercase tracking-wider">
+              <span>Sabores & Texturas</span>
+              <span>→</span>
+            </div>
+          </div>
+
+          <!-- Pilar 2: Arte en Diálogo -->
+          <div class="rounded-3xl bg-canvas border border-stone-200/90 hover:border-gold hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col justify-between group">
+            <div>
+              <div class="relative h-52 w-full overflow-hidden bg-stone-100">
+                <img 
+                  src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&w=800&q=80" 
+                  alt="Colección y exposiciones del Museo Arocena" 
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-3 left-4 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 text-stone-900 shadow-md">
+                  Salas Virreinales & Modernas
+                </span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-serif text-2xl font-bold text-charcoal mb-2 group-hover:text-amber-800 transition-colors">Arte en Diálogo</h3>
+                <p class="text-sm text-stone-600 leading-relaxed">
+                  Menús que evolucionan con cada exposición temporal. Podrás recorrer las salas de exhibición y posteriormente probar su reinterpretación culinaria.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2 border-t border-stone-200/60 flex items-center justify-between text-xs font-semibold text-amber-800 uppercase tracking-wider">
+              <span>Exposiciones Vivas</span>
+              <span>→</span>
+            </div>
+          </div>
+
+          <!-- Pilar 3: Atmósfera & Música -->
+          <div class="rounded-3xl bg-canvas border border-stone-200/90 hover:border-olive hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col justify-between group">
+            <div>
+              <div class="relative h-52 w-full overflow-hidden bg-stone-100">
+                <img 
+                  src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=800&q=80" 
+                  alt="Jazz acústico y ambiente en el museo" 
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-3 left-4 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 text-stone-900 shadow-md">
+                  Jazz & Arquitectura
+                </span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-serif text-2xl font-bold text-charcoal mb-2 group-hover:text-olive transition-colors">Atmósfera & Música</h3>
+                <p class="text-sm text-stone-600 leading-relaxed">
+                  Iluminación tenue, mobiliario contemporáneo en un recinto neoclásico y curaduría de jazz acústico en vivo los fines de semana.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2 border-t border-stone-200/60 flex items-center justify-between text-xs font-semibold text-olive uppercase tracking-wider">
+              <span>Patrimonio & Luz</span>
+              <span>→</span>
+            </div>
+          </div>
+
+          <!-- Pilar 4: Convivencia & Social -->
+          <div class="rounded-3xl bg-canvas border border-stone-200/90 hover:border-terracotta hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col justify-between group">
+            <div>
+              <div class="relative h-52 w-full overflow-hidden bg-stone-100">
+                <img 
+                  src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=800&q=80" 
+                  alt="Encuentro social y sobremesa en Torreón" 
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-3 left-4 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 text-stone-900 shadow-md">
+                  Punto de Encuentro
+                </span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-serif text-2xl font-bold text-charcoal mb-2 group-hover:text-terracotta transition-colors">Convivencia & Social</h3>
+                <p class="text-sm text-stone-600 leading-relaxed">
+                  El nuevo punto de reunión para adultos jóvenes y mentes creativas en Torreón: citas, celebraciones y momentos memorables para capturar y compartir.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2 border-t border-stone-200/60 flex items-center justify-between text-xs font-semibold text-terracotta uppercase tracking-wider">
+              <span>Espacio Instagrameable</span>
+              <span>→</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECCIÓN 4: MENÚ INSPIRADO EN EL ARTE ("Cada exposición tiene un sabor")
+         ======================================================================== -->
+    <section id="menu" class="py-24 bg-canvas bg-canvas-textured">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Gastronomía & Curaduría</span>
+            <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal mt-2">
+              Cada exposición tiene un sabor.
+            </h2>
+            <p class="text-stone-600 mt-3 max-w-xl text-base">
+              Descubre nuestra carta de temporada creada en colaboración con chefs reconocidos de Torreón e historiadores del Museo Arocena.
+            </p>
+          </div>
+
+          <!-- Category filter buttons -->
+          <div class="mt-6 md:mt-0 flex flex-wrap gap-2">
+            <button 
+              type="button" 
+              data-filter="all" 
+              class="menu-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-stone-900 text-white shadow-md transition-all"
+            >
+              Todos los Tiempos
+            </button>
+            <button 
+              type="button" 
+              data-filter="starters" 
+              class="menu-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white text-stone-700 hover:bg-stone-100 border border-stone-200 transition-all"
+            >
+              Entradas en Lienzo
+            </button>
+            <button 
+              type="button" 
+              data-filter="mains" 
+              class="menu-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white text-stone-700 hover:bg-stone-100 border border-stone-200 transition-all"
+            >
+              Platos Fuertes
+            </button>
+            <button 
+              type="button" 
+              data-filter="desserts" 
+              class="menu-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white text-stone-700 hover:bg-stone-100 border border-stone-200 transition-all"
+            >
+              Postres Esculturales
+            </button>
+            <button 
+              type="button" 
+              data-filter="cocktails" 
+              class="menu-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white text-stone-700 hover:bg-stone-100 border border-stone-200 transition-all"
+            >
+              Mixología Botánica
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Menu Container (Pre-renderizado para carga inmediata) -->
+        <div id="menu-items-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Platillo 1 -->
+          <article class="card-editorial group bg-white rounded-2xl overflow-hidden border border-stone-200/70 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col">
+            <div class="relative h-60 w-full overflow-hidden bg-stone-100">
+              <img src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80" alt="Tártara de Atún en Lienzo Cítrico" class="img-editorial w-full h-full object-cover" loading="lazy" />
+              <span class="absolute top-4 left-4 text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full bg-stone-900/80 text-white backdrop-blur-md">Temporada Sorolla</span>
+              <span class="absolute bottom-4 right-4 text-sm font-bold px-3 py-1 rounded-lg bg-white/95 text-stone-900 shadow-md">$340 MXN</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <p class="text-xs font-medium text-amber-800 tracking-wider uppercase mb-1.5 flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                  Inspirado en el Impresionismo y los reflejos de luz de Sorolla
+                </p>
+                <h3 class="font-serif-display text-xl font-bold text-stone-900 group-hover:text-amber-800 transition-colors">Tártara de Atún en Lienzo Cítrico</h3>
+                <p class="text-sm text-stone-600 mt-2 line-clamp-3 leading-relaxed">Atún aleta azul marinado en emulsión de yuzu y chile serrano, perlas de aguacate tatemado y velo de betabel deshidratado que imita una pincelada al óleo.</p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
+                <span class="text-xs text-stone-500 italic">Maridaje: Chenin Blanc de Parras</span>
+                <button type="button" onclick="openPlateDetails('m1')" class="inline-flex items-center gap-1 text-xs font-semibold text-amber-900 hover:text-amber-700 tracking-wide uppercase transition-colors">Inspiración →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Platillo 2 -->
+          <article class="card-editorial group bg-white rounded-2xl overflow-hidden border border-stone-200/70 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col">
+            <div class="relative h-60 w-full overflow-hidden bg-stone-100">
+              <img src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?auto=format&fit=crop&w=800&q=80" alt="Jardín Escultural de Betabeles Asados" class="img-editorial w-full h-full object-cover" loading="lazy" />
+              <span class="absolute top-4 left-4 text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full bg-stone-900/80 text-white backdrop-blur-md">Vegetariano</span>
+              <span class="absolute bottom-4 right-4 text-sm font-bold px-3 py-1 rounded-lg bg-white/95 text-stone-900 shadow-md">$280 MXN</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <p class="text-xs font-medium text-amber-800 tracking-wider uppercase mb-1.5 flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                  Homenaje a la Escultura Contemporánea del Museo Arocena
+                </p>
+                <h3 class="font-serif-display text-xl font-bold text-stone-900 group-hover:text-amber-800 transition-colors">Jardín Escultural de Betabeles</h3>
+                <p class="text-sm text-stone-600 mt-2 line-clamp-3 leading-relaxed">Variedad de betabeles confitados con queso de cabra artesanal de la Comarca Lagunera, crumble de nuez pecana garapiñada y reducción balsámica.</p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
+                <span class="text-xs text-stone-500 italic">Maridaje: Chardonnay de Coahuila</span>
+                <button type="button" onclick="openPlateDetails('m2')" class="inline-flex items-center gap-1 text-xs font-semibold text-amber-900 hover:text-amber-700 tracking-wide uppercase transition-colors">Inspiración →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Platillo 3 -->
+          <article class="card-editorial group bg-white rounded-2xl overflow-hidden border border-stone-200/70 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col">
+            <div class="relative h-60 w-full overflow-hidden bg-stone-100">
+              <img src="https://images.unsplash.com/photo-1546241072-48010ad2862c?auto=format&fit=crop&w=800&q=80" alt="Costilla Glaseada en Mole Barroco Virreinal" class="img-editorial w-full h-full object-cover" loading="lazy" />
+              <span class="absolute top-4 left-4 text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full bg-stone-900/80 text-white backdrop-blur-md">Firma de la Casa</span>
+              <span class="absolute bottom-4 right-4 text-sm font-bold px-3 py-1 rounded-lg bg-white/95 text-stone-900 shadow-md">$520 MXN</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <p class="text-xs font-medium text-amber-800 tracking-wider uppercase mb-1.5 flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                  Colección de Arte Virreinal: Salón S. XVII y XVIII
+                </p>
+                <h3 class="font-serif-display text-xl font-bold text-stone-900 group-hover:text-amber-800 transition-colors">Costilla en Mole Barroco</h3>
+                <p class="text-sm text-stone-600 mt-2 line-clamp-3 leading-relaxed">Short rib braseada 18 horas, bañada en mole artesanal de 28 ingredientes con notas de cacao y chiles secos, servida sobre puré de plátano macho.</p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
+                <span class="text-xs text-stone-500 italic">Maridaje: Cabernet Sauvignon Parras</span>
+                <button type="button" onclick="openPlateDetails('m3')" class="inline-flex items-center gap-1 text-xs font-semibold text-amber-900 hover:text-amber-700 tracking-wide uppercase transition-colors">Inspiración →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Platillo 4 -->
+          <article class="card-editorial group bg-white rounded-2xl overflow-hidden border border-stone-200/70 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col">
+            <div class="relative h-60 w-full overflow-hidden bg-stone-100">
+              <img src="https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?auto=format&fit=crop&w=800&q=80" alt="Pesca del Día en Cenizas de Habanero y Maíz" class="img-editorial w-full h-full object-cover" loading="lazy" />
+              <span class="absolute top-4 left-4 text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full bg-stone-900/80 text-white backdrop-blur-md">Sustentable</span>
+              <span class="absolute bottom-4 right-4 text-sm font-bold px-3 py-1 rounded-lg bg-white/95 text-stone-900 shadow-md">$480 MXN</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <p class="text-xs font-medium text-amber-800 tracking-wider uppercase mb-1.5 flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                  Interpretación de Contrastes Lumínicos del Claroscuro
+                </p>
+                <h3 class="font-serif-display text-xl font-bold text-stone-900 group-hover:text-amber-800 transition-colors">Pesca en Cenizas y Maíz</h3>
+                <p class="text-sm text-stone-600 mt-2 line-clamp-3 leading-relaxed">Robalo salvaje a la leña, costra de ceniza de totomoxtle, mousseline de elote tierno y emulsión de tomatillo milpero al mezcal.</p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
+                <span class="text-xs text-stone-500 italic">Maridaje: Sauvignon Blanc del Altiplano</span>
+                <button type="button" onclick="openPlateDetails('m4')" class="inline-flex items-center gap-1 text-xs font-semibold text-amber-900 hover:text-amber-700 tracking-wide uppercase transition-colors">Inspiración →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Platillo 5 -->
+          <article class="card-editorial group bg-white rounded-2xl overflow-hidden border border-stone-200/70 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col">
+            <div class="relative h-60 w-full overflow-hidden bg-stone-100">
+              <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80" alt="Esfera de Chocolate Óleo y Oro" class="img-editorial w-full h-full object-cover" loading="lazy" />
+              <span class="absolute top-4 left-4 text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full bg-stone-900/80 text-white backdrop-blur-md">Experiencia en Mesa</span>
+              <span class="absolute bottom-4 right-4 text-sm font-bold px-3 py-1 rounded-lg bg-white/95 text-stone-900 shadow-md">$260 MXN</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <p class="text-xs font-medium text-amber-800 tracking-wider uppercase mb-1.5 flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                  Retablos Dorados y Pan de Oro Novohispano
+                </p>
+                <h3 class="font-serif-display text-xl font-bold text-stone-900 group-hover:text-amber-800 transition-colors">Esfera de Chocolate 'Óleo y Oro'</h3>
+                <p class="text-sm text-stone-600 mt-2 line-clamp-3 leading-relaxed">Cúpula de chocolate semiamargo rellena de mousse de maracuyá y bizcocho de almendra, bañada en mesa con salsa tibia de toffee y hoja de oro.</p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
+                <span class="text-xs text-stone-500 italic">Maridaje: Copa de Oporto o Carajillo</span>
+                <button type="button" onclick="openPlateDetails('m5')" class="inline-flex items-center gap-1 text-xs font-semibold text-amber-900 hover:text-amber-700 tracking-wide uppercase transition-colors">Inspiración →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Platillo 6 -->
+          <article class="card-editorial group bg-white rounded-2xl overflow-hidden border border-stone-200/70 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col">
+            <div class="relative h-60 w-full overflow-hidden bg-stone-100">
+              <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80" alt="Cóctel Claroscuro 1904" class="img-editorial w-full h-full object-cover" loading="lazy" />
+              <span class="absolute top-4 left-4 text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full bg-stone-900/80 text-white backdrop-blur-md">Mixología Botánica</span>
+              <span class="absolute bottom-4 right-4 text-sm font-bold px-3 py-1 rounded-lg bg-white/95 text-stone-900 shadow-md">$220 MXN</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <p class="text-xs font-medium text-amber-800 tracking-wider uppercase mb-1.5 flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                  Arquitectura Neoclásica del Edificio Arocena
+                </p>
+                <h3 class="font-serif-display text-xl font-bold text-stone-900 group-hover:text-amber-800 transition-colors">Cóctel Claroscuro 1904</h3>
+                <p class="text-sm text-stone-600 mt-2 line-clamp-3 leading-relaxed">Mezcal espadín artesanal infusionado con carbón activado, licor de damiana coahuilense, toronja ruby y romero silvestre flameado.</p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
+                <span class="text-xs text-stone-500 italic">Maridaje: Aperitivo de bienvenida</span>
+                <button type="button" onclick="openPlateDetails('m6')" class="inline-flex items-center gap-1 text-xs font-semibold text-amber-900 hover:text-amber-700 tracking-wide uppercase transition-colors">Inspiración →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Platillo 7 -->
+          <article class="card-editorial group bg-white rounded-2xl overflow-hidden border border-stone-200/70 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col">
+            <div class="relative h-60 w-full overflow-hidden bg-stone-100">
+              <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=80" alt="Elixir de la Condesa" class="img-editorial w-full h-full object-cover" loading="lazy" />
+              <span class="absolute top-4 left-4 text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full bg-stone-900/80 text-white backdrop-blur-md">Refrescante & Floral</span>
+              <span class="absolute bottom-4 right-4 text-sm font-bold px-3 py-1 rounded-lg bg-white/95 text-stone-900 shadow-md">$210 MXN</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <p class="text-xs font-medium text-amber-800 tracking-wider uppercase mb-1.5 flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                  Retratos Femeninos del Siglo XIX
+                </p>
+                <h3 class="font-serif-display text-xl font-bold text-stone-900 group-hover:text-amber-800 transition-colors">Elixir de la Condesa</h3>
+                <p class="text-sm text-stone-600 mt-2 line-clamp-3 leading-relaxed">Gin premium, infusión de flor de jamaica y lavanda orgánica regional, jugo de limón eureka, cordial de peras y burbujas de prosecco.</p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
+                <span class="text-xs text-stone-500 italic">Maridaje: Ideal con entradas y ensaladas</span>
+                <button type="button" onclick="openPlateDetails('m7')" class="inline-flex items-center gap-1 text-xs font-semibold text-amber-900 hover:text-amber-700 tracking-wide uppercase transition-colors">Inspiración →</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Platillo 8 -->
+          <article class="card-editorial group bg-white rounded-2xl overflow-hidden border border-stone-200/70 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col">
+            <div class="relative h-60 w-full overflow-hidden bg-stone-100">
+              <img src="https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=800&q=80" alt="Risotto de Hongos Silvestres y Trufa Lagunera" class="img-editorial w-full h-full object-cover" loading="lazy" />
+              <span class="absolute top-4 left-4 text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full bg-stone-900/80 text-white backdrop-blur-md">Vegetariano Gourmet</span>
+              <span class="absolute bottom-4 right-4 text-sm font-bold px-3 py-1 rounded-lg bg-white/95 text-stone-900 shadow-md">$410 MXN</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <p class="text-xs font-medium text-amber-800 tracking-wider uppercase mb-1.5 flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                  Paisajes y Botánica de Coahuila
+                </p>
+                <h3 class="font-serif-display text-xl font-bold text-stone-900 group-hover:text-amber-800 transition-colors">Risotto de Hongos & Trufa</h3>
+                <p class="text-sm text-stone-600 mt-2 line-clamp-3 leading-relaxed">Arroz arborio cocido a fuego lento en caldo de setas silvestres, queso de oveja curado de la región, mantequilla noisette y lajas de trufa fresca.</p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
+                <span class="text-xs text-stone-500 italic">Maridaje: Pinot Noir o Nebbiolo</span>
+                <button type="button" onclick="openPlateDetails('m8')" class="inline-flex items-center gap-1 text-xs font-semibold text-amber-900 hover:text-amber-700 tracking-wide uppercase transition-colors">Inspiración →</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Note about seasonal menu -->
+        <div class="mt-12 text-center p-6 rounded-2xl bg-white border border-stone-200 max-w-2xl mx-auto shadow-sm">
+          <p class="text-xs text-stone-500 uppercase tracking-wider font-semibold">Nota Conceptual</p>
+          <p class="text-sm text-stone-700 mt-1">
+            Los precios y platillos aquí mostrados corresponden a la propuesta gastronómica preliminar del concepto <em>Arté</em>. Los menús definitivos se ajustan según la rotación de colecciones del Museo Arocena.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECCIÓN 5: EXPERIENCIAS & EVENTOS (Inspirado en Faena Epicurean Events)
+         ======================================================================== -->
+    <section id="eventos" class="py-24 bg-charcoal text-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+          <div>
+            <span class="text-xs uppercase tracking-widest text-gold font-semibold">Epicurean Events & Calendario</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold text-canvas mt-2">
+              Siempre hay algo nuevo por descubrir.
+            </h2>
+            <p class="text-stone-300 mt-3 max-w-xl text-base">
+              Agenda noches temáticas, maridajes guiados por curadores y presentaciones musicales que transforman el recinto.
+            </p>
+          </div>
+          <div class="mt-4 md:mt-0">
+            <a href="#reservaciones" class="inline-flex items-center gap-2 text-sm text-gold hover:text-white transition-colors underline font-medium">
+              Consultar cupos disponibles en WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Grid de Eventos Especiales -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Evento 1 -->
+          <div class="card-editorial rounded-2xl overflow-hidden glass-dark border border-stone-700 flex flex-col group">
+            <div class="relative h-64 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=800&q=80" 
+                alt="Noche de Jazz y Arte en el Museo Arocena" 
+                class="img-editorial w-full h-full object-cover"
+              />
+              <span class="absolute top-4 left-4 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-terracotta text-white">
+                Viernes Quincenales
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <p class="text-xs text-gold uppercase tracking-wider font-medium">Música en Vivo & Coctelería</p>
+                <h3 class="font-serif text-2xl font-bold text-white mt-1 group-hover:text-gold transition-colors">
+                  Jazz Clandestino & Maridaje de 4 Tiempos
+                </h3>
+                <p class="text-sm text-stone-300 mt-3 leading-relaxed">
+                  Cuarteto acústico interpretando estándares de jazz mientras disfrutas de una degustación maridada con vinos de Parras de la Fuente.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+                <span class="text-xs text-stone-400">8:30 PM — 11:30 PM</span>
+                <a href="#reservaciones" class="text-xs font-semibold text-gold hover:text-white uppercase tracking-wider">
+                  Reservar Mesa →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Evento 2 -->
+          <div class="card-editorial rounded-2xl overflow-hidden glass-dark border border-stone-700 flex flex-col group">
+            <div class="relative h-64 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&w=800&q=80" 
+                alt="Recorrido exclusivo y brunch en el Museo Arocena" 
+                class="img-editorial w-full h-full object-cover"
+              />
+              <span class="absolute top-4 left-4 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-olive text-white">
+                Domingos Familiares
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <p class="text-xs text-gold uppercase tracking-wider font-medium">Recorrido Privado + Degustación</p>
+                <h3 class="font-serif text-2xl font-bold text-white mt-1 group-hover:text-gold transition-colors">
+                  El Brunch Dominical del Curador
+                </h3>
+                <p class="text-sm text-stone-300 mt-3 leading-relaxed">
+                  Visita guiada exclusiva a puerta cerrada por las colecciones virreinales, culminando en una mesa de mimosas artesanales y panadería local.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+                <span class="text-xs text-stone-400">11:00 AM — 2:00 PM</span>
+                <a href="#reservaciones" class="text-xs font-semibold text-gold hover:text-white uppercase tracking-wider">
+                  Reservar Mesa →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Evento 3 -->
+          <div class="card-editorial rounded-2xl overflow-hidden glass-dark border border-stone-700 flex flex-col group">
+            <div class="relative h-64 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80" 
+                alt="Taller de pintura al óleo y cata de vino" 
+                class="img-editorial w-full h-full object-cover"
+              />
+              <span class="absolute top-4 left-4 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-gold text-charcoal font-bold">
+                Edición Especial
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <p class="text-xs text-gold uppercase tracking-wider font-medium">Taller & Experiencia Inmersiva</p>
+                <h3 class="font-serif text-2xl font-bold text-white mt-1 group-hover:text-gold transition-colors">
+                  Cata a Ciegas: El Color del Vino
+                </h3>
+                <p class="text-sm text-stone-300 mt-3 leading-relaxed">
+                  Experiencia sensorial guiada por sommelier: identifica aromas y notas mientras un artista plástico pinta una obra en vivo.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+                <span class="text-xs text-stone-400">Último Jueves del Mes</span>
+                <a href="#reservaciones" class="text-xs font-semibold text-gold hover:text-white uppercase tracking-wider">
+                  Reservar Mesa →
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECCIÓN 6: PAQUETES ESPECIALES (Museo + Restaurante)
+         ======================================================================== -->
+    <section id="paquetes" class="py-24 bg-white border-b border-stone-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Integración Cultural</span>
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal mt-2">
+            Tu próxima salida tiene más de un plan.
+          </h2>
+          <p class="text-stone-600 mt-3 text-base">
+            Paquetes integrales que unen el boleto de entrada a las salas de exhibición del Museo Arocena con la experiencia culinaria reservada.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Paquete 1: Pase Cultural -->
+          <div class="rounded-3xl bg-canvas border border-stone-200 hover:border-stone-400 transition-all flex flex-col justify-between shadow-sm overflow-hidden group">
+            <div>
+              <div class="relative h-48 w-full overflow-hidden bg-stone-100">
+                <img 
+                  src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=800&q=80" 
+                  alt="Recorrido cultural por salas del museo y gastronomía" 
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-3 left-4 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 text-stone-900 shadow-md">
+                  Museo + Degustación
+                </span>
+              </div>
+              <div class="p-8">
+                <span class="text-xs uppercase tracking-widest text-stone-500 font-semibold">Plan Individual o Amigos</span>
+                <h3 class="font-serif text-2xl font-bold text-charcoal mt-1">Pase Cultural & Menú 3 Tiempos</h3>
+                <p class="text-sm text-stone-600 mt-3">
+                  Ideal para quienes desean recorrer las exposiciones del día a su propio ritmo y culminar con una comida maridada.
+                </p>
+                <ul class="mt-6 space-y-3 text-sm text-stone-700">
+                  <li class="flex items-center gap-2">
+                    <span class="text-terracotta font-bold">✓</span> Entrada general a todas las salas del museo
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-terracotta font-bold">✓</span> Menú degustación de 3 tiempos
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-terracotta font-bold">✓</span> 1 Cóctel de autor o copa de vino de Coahuila
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-terracotta font-bold">✓</span> Ficha impresa de inspiración pictórica
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="px-8 pb-8 pt-4 border-t border-stone-200/60">
+              <a href="#reservaciones" class="block w-full py-3 text-center rounded-xl border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition-colors text-sm font-semibold">
+                Consultar Disponibilidad
+              </a>
+            </div>
+          </div>
+
+          <!-- Paquete 2: Noche Romántica (Destacado) -->
+          <div class="rounded-3xl bg-charcoal text-white border-2 border-gold relative shadow-2xl flex flex-col justify-between scale-105 z-10 overflow-hidden group">
+            <span class="badge-gold absolute top-4 right-4 z-20 text-[10px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md">
+              Más Solicitado
+            </span>
+            <div>
+              <div class="relative h-52 w-full overflow-hidden bg-stone-900">
+                <img 
+                  src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" 
+                  alt="Mesa romántica para parejas en el restaurante del museo" 
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent"></div>
+                <span class="absolute bottom-3 left-4 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-gold text-charcoal shadow-md font-bold">
+                  Experiencia de Pareja
+                </span>
+              </div>
+              <div class="p-8">
+                <span class="text-xs uppercase tracking-widest text-gold font-semibold">Experiencia para Parejas</span>
+                <h3 class="font-serif text-2xl font-bold text-canvas mt-1">Cena Crepuscular & Museo Privado</h3>
+                <p class="text-sm text-stone-300 mt-3">
+                  Una velada inolvidable: recorrido al atardecer por los patios neoclásicos y mesa reservada con atención personalizada.
+                </p>
+                <ul class="mt-6 space-y-3 text-sm text-stone-300">
+                  <li class="flex items-center gap-2">
+                    <span class="text-gold font-bold">✓</span> 2 Accesos VIP al Museo Arocena
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-gold font-bold">✓</span> Menú de autor de 5 tiempos para dos personas
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-gold font-bold">✓</span> Botella de vino tinto o blanco de la región
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-gold font-bold">✓</span> Mesa preferencial con vela y vista al patio
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="px-8 pb-8 pt-4 border-t border-stone-700">
+              <a href="#reservaciones" class="block w-full py-3.5 text-center rounded-xl bg-terracotta hover:bg-terracotta-dark text-white font-semibold transition-colors text-sm shadow-md">
+                Reservar Noche para Dos
+              </a>
+            </div>
+          </div>
+
+          <!-- Paquete 3: Mesa de Celebración -->
+          <div class="rounded-3xl bg-canvas border border-stone-200 hover:border-stone-400 transition-all flex flex-col justify-between shadow-sm overflow-hidden group">
+            <div>
+              <div class="relative h-48 w-full overflow-hidden bg-stone-100">
+                <img 
+                  src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=80" 
+                  alt="Coctelería y mesa colectiva con amigos" 
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-3 left-4 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 text-stone-900 shadow-md">
+                  Grupos & Mixología
+                </span>
+              </div>
+              <div class="p-8">
+                <span class="text-xs uppercase tracking-widest text-stone-500 font-semibold">Grupos & Social Explorers</span>
+                <h3 class="font-serif text-2xl font-bold text-charcoal mt-1">Mesa Colectiva & Mixología</h3>
+                <p class="text-sm text-stone-600 mt-3">
+                  Diseñado para cumpleaños, grupos de amigos o networking que buscan una velada fuera de lo convencional en Torreón.
+                </p>
+                <ul class="mt-6 space-y-3 text-sm text-stone-700">
+                  <li class="flex items-center gap-2">
+                    <span class="text-terracotta font-bold">✓</span> Mesa privada para 6 a 12 personas
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-terracotta font-bold">✓</span> Selección de tapas gourmet para compartir
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-terracotta font-bold">✓</span> Barra de mixología con cócteles temáticos
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="text-terracotta font-bold">✓</span> Opciones personalizadas de menú
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="px-8 pb-8 pt-4 border-t border-stone-200/60">
+              <a href="#reservaciones" class="block w-full py-3 text-center rounded-xl border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition-colors text-sm font-semibold">
+                Cotizar Grupo
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECCIÓN 7: GALERÍA SOCIAL & CURADURÍA VISUAL (Estilo Faena CrowdRiff)
+         ======================================================================== -->
+    <section class="py-24 bg-canvas">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">@arte.museoarocena</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal mt-2">
+            El arte también se vive.
+          </h2>
+          <p class="text-stone-600 mt-2 text-sm">
+            Comparte tus capturas de la experiencia usando el hashtag <span class="font-semibold text-charcoal">#ArteALaMesa</span> para formar parte de nuestra galería.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          <div class="aspect-square rounded-2xl overflow-hidden card-editorial relative group">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80" alt="Emplatado artístico" class="img-editorial w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-charcoal/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold">
+              Ver en Instagram
+            </div>
+          </div>
+          <div class="aspect-square rounded-2xl overflow-hidden card-editorial relative group">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80" alt="Arquitectura y cena" class="img-editorial w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-charcoal/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold">
+              Ver en Instagram
+            </div>
+          </div>
+          <div class="aspect-square rounded-2xl overflow-hidden card-editorial relative group">
+            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=500&q=80" alt="Postre de chocolate" class="img-editorial w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-charcoal/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold">
+              Ver en Instagram
+            </div>
+          </div>
+          <div class="aspect-square rounded-2xl overflow-hidden card-editorial relative group">
+            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=500&q=80" alt="Mixología oscura" class="img-editorial w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-charcoal/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold">
+              Ver en Instagram
+            </div>
+          </div>
+          <div class="aspect-square rounded-2xl overflow-hidden card-editorial relative group">
+            <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=500&q=80" alt="Óleo y arte en el museo" class="img-editorial w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-charcoal/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold">
+              Ver en Instagram
+            </div>
+          </div>
+          <div class="aspect-square rounded-2xl overflow-hidden card-editorial relative group">
+            <img src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=500&q=80" alt="Tártara cítrica de autor" class="img-editorial w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-charcoal/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold">
+              Ver en Instagram
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECCIÓN 8: MOTOR DE RESERVACIONES INTERACTIVO
+         ======================================================================== -->
+    <section id="reservaciones" class="py-24 bg-white border-t border-stone-200 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          <!-- Columna Información de Reserva -->
+          <div class="lg:col-span-5 space-y-6">
+            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Reservaciones & Cupos</span>
+            <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal leading-tight">
+              Haz espacio para una experiencia diferente.
+            </h2>
+            <p class="text-stone-600 text-base leading-relaxed">
+              Para garantizar una atención cercana y un ambiente óptimo de contemplación y gastronomía, operamos con capacidad limitada por turno.
+            </p>
+
+            <div class="bg-canvas p-6 rounded-2xl border border-stone-200 space-y-4">
+              <h4 class="font-bold text-sm text-stone-900 uppercase tracking-wider">Políticas de Visita</h4>
+              <ul class="text-xs text-stone-600 space-y-2.5">
+                <li class="flex items-start gap-2">
+                  <span class="text-terracotta font-bold">•</span>
+                  <span><strong>Confirmación:</strong> Tu solicitud es recibida inmediatamente y nuestro anfitrión te contactará vía WhatsApp o llamada para confirmar asignación de mesa.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-terracotta font-bold">•</span>
+                  <span><strong>Tolerancia:</strong> Se reservan las mesas con un margen de 15 minutos de cortesía.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-terracotta font-bold">•</span>
+                  <span><strong>Acceso sin entrada:</strong> No es obligatorio adquirir boleto del museo si únicamente deseas cenar en Arté, aunque los paquetes con museo ofrecen tarifa preferencial.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Imagen Editorial de Mesa Reservada -->
+            <div class="rounded-2xl overflow-hidden border border-stone-200 shadow-md h-48 relative group">
+              <img 
+                src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" 
+                alt="Mesa reservada en el restaurante del Museo Arocena" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-transparent flex items-end p-4">
+                <p class="text-xs text-white font-medium flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                  Mesas exclusivas preparadas por concierge
+                </p>
+              </div>
+            </div>
+
+            <!-- WhatsApp Direct Button -->
+            <div class="pt-2">
+              <button 
+                id="btn-whatsapp-booking" 
+                type="button" 
+                class="w-full py-4 px-6 rounded-2xl bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-sm flex items-center justify-center gap-3 transition-colors shadow-md"
+              >
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>Solicitar al Instante vía WhatsApp</span>
+              </button>
+              <p class="text-[11px] text-stone-400 text-center mt-2">Respuesta en menos de 15 minutos en horario operativo.</p>
+            </div>
+          </div>
+
+          <!-- Columna Formulario de Reserva -->
+          <div class="lg:col-span-7">
+            <div class="bg-canvas border border-stone-200/90 rounded-3xl p-8 sm:p-10 shadow-lg">
+              <h3 class="font-serif text-2xl font-bold text-charcoal mb-2">Formulario de Reservación</h3>
+              <p class="text-sm text-stone-600 mb-8">Completa tus datos para agendar tu mesa o paquete especial.</p>
+
+              <form id="booking-form" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  
+                  <!-- Nombre -->
+                  <div>
+                    <label for="res-name" class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-2">Nombre Completo *</label>
+                    <input 
+                      type="text" 
+                      id="res-name" 
+                      required 
+                      placeholder="Ej. Sofía Garza" 
+                      class="w-full px-4 py-3 rounded-xl border border-stone-300 bg-white focus:outline-none focus:ring-2 focus:ring-terracotta text-sm text-charcoal placeholder-stone-400"
+                    />
+                  </div>
+
+                  <!-- Teléfono -->
+                  <div>
+                    <label for="res-phone" class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-2">WhatsApp / Teléfono *</label>
+                    <input 
+                      type="tel" 
+                      id="res-phone" 
+                      required 
+                      placeholder="Ej. 871 123 4567" 
+                      class="w-full px-4 py-3 rounded-xl border border-stone-300 bg-white focus:outline-none focus:ring-2 focus:ring-terracotta text-sm text-charcoal placeholder-stone-400"
+                    />
+                  </div>
+
+                  <!-- Fecha -->
+                  <div>
+                    <label for="res-date" class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-2">Fecha Deseada *</label>
+                    <input 
+                      type="date" 
+                      id="res-date" 
+                      required 
+                      class="w-full px-4 py-3 rounded-xl border border-stone-300 bg-white focus:outline-none focus:ring-2 focus:ring-terracotta text-sm text-charcoal"
+                    />
+                  </div>
+
+                  <!-- Horario / Turno -->
+                  <div>
+                    <label for="res-time" class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-2">Horario / Turno *</label>
+                    <select 
+                      id="res-time" 
+                      required 
+                      class="w-full px-4 py-3 rounded-xl border border-stone-300 bg-white focus:outline-none focus:ring-2 focus:ring-terracotta text-sm text-charcoal"
+                    >
+                      <option value="" disabled selected>Selecciona un horario</option>
+                      <option value="1:30 PM (Almuerzo)">1:30 PM (Almuerzo)</option>
+                      <option value="3:00 PM (Almuerzo tardío)">3:00 PM (Almuerzo tardío)</option>
+                      <option value="7:30 PM (Cena Crepuscular)">7:30 PM (Cena Crepuscular)</option>
+                      <option value="9:00 PM (Cena Nocturna)">9:00 PM (Cena Nocturna)</option>
+                      <option value="11:30 AM (Brunch Dominical)">11:30 AM (Brunch Dominical)</option>
+                    </select>
+                  </div>
+
+                  <!-- Número de Personas -->
+                  <div>
+                    <label for="res-guests" class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-2">Comensales *</label>
+                    <select 
+                      id="res-guests" 
+                      required 
+                      class="w-full px-4 py-3 rounded-xl border border-stone-300 bg-white focus:outline-none focus:ring-2 focus:ring-terracotta text-sm text-charcoal"
+                    >
+                      <option value="2 Personas" selected>2 Personas</option>
+                      <option value="1 Persona">1 Persona</option>
+                      <option value="3 Personas">3 Personas</option>
+                      <option value="4 Personas">4 Personas</option>
+                      <option value="5 a 8 Personas">5 a 8 Personas</option>
+                      <option value="Más de 8 (Grupo Especial)">Más de 8 (Grupo Especial)</option>
+                    </select>
+                  </div>
+
+                  <!-- Experiencia o Paquete -->
+                  <div>
+                    <label for="res-package" class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-2">Tipo de Experiencia</label>
+                    <select 
+                      id="res-package" 
+                      class="w-full px-4 py-3 rounded-xl border border-stone-300 bg-white focus:outline-none focus:ring-2 focus:ring-terracotta text-sm text-charcoal"
+                    >
+                      <option value="A la Carta (Restaurante)" selected>Cena a la Carta</option>
+                      <option value="Pase Cultural + Menú 3 Tiempos">Pase Cultural + Menú 3 Tiempos</option>
+                      <option value="Noche Crepuscular (Parejas)">Noche Crepuscular (Parejas)</option>
+                      <option value="Mesa Colectiva & Mixología">Mesa Colectiva & Mixología</option>
+                      <option value="Evento Especial de Jazz / Cata">Evento de Calendario</option>
+                    </select>
+                  </div>
+
+                </div>
+
+                <!-- Comentarios / Alergias -->
+                <div>
+                  <label for="res-notes" class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-2">Peticiones Especiales, Alergias o Celebraciones</label>
+                  <textarea 
+                    id="res-notes" 
+                    rows="3" 
+                    placeholder="Ej. Aniversario de bodas, preferencia de mesa junto a la terraza, alergia a mariscos..."
+                    class="w-full px-4 py-3 rounded-xl border border-stone-300 bg-white focus:outline-none focus:ring-2 focus:ring-terracotta text-sm text-charcoal placeholder-stone-400"
+                  ></textarea>
+                </div>
+
+                <!-- Botón Enviar Formulario -->
+                <button 
+                  type="submit" 
+                  class="w-full py-4 rounded-xl bg-charcoal hover:bg-terracotta text-white font-bold text-base transition-colors shadow-lg"
+                >
+                  Confirmar Solicitud de Reserva
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECCIÓN 9: UBICACIÓN, ACCESOS & HORARIOS
+         ======================================================================== -->
+    <section id="ubicacion" class="py-24 bg-canvas bg-canvas-textured border-t border-stone-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-5 space-y-6">
+            <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Ubicación & Acceso</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal">
+              En el corazón histórico de Torreón
+            </h2>
+            <p class="text-stone-600 text-sm leading-relaxed">
+              Ubicado en el patio interior y sala gourmet del <strong>Museo Arocena</strong>, un edificio histórico de arquitectura imponente sobre la emblemática Calle Cepeda.
+            </p>
+
+            <div class="space-y-4 pt-2">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-white border border-stone-200 flex items-center justify-center shrink-0 text-terracotta font-bold">
+                  📍
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-stone-900">Dirección</h4>
+                  <p class="text-xs text-stone-600">Calle Cepeda 354, Centro Histórico, 27000 Torreón, Coah., México.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-white border border-stone-200 flex items-center justify-center shrink-0 text-terracotta font-bold">
+                  🕒
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-stone-900">Horarios de Operación</h4>
+                  <p class="text-xs text-stone-600">Martes a Sábado: 1:00 PM – 11:30 PM</p>
+                  <p class="text-xs text-stone-600">Domingos (Brunch & Museo): 11:00 AM – 6:00 PM</p>
+                  <p class="text-[11px] text-stone-400 italic">Lunes: Cerrado por mantenimiento de colecciones</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-white border border-stone-200 flex items-center justify-center shrink-0 text-terracotta font-bold">
+                  🚗
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-stone-900">Estacionamiento & Valet</h4>
+                  <p class="text-xs text-stone-600">Servicio de Valet Parking en acceso por Calle Cepeda y estacionamiento subterráneo seguro en Plaza Mayor.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <a 
+                href="https://maps.google.com/?q=Museo+Arocena+Torreon" 
+                target="_blank" 
+                class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-charcoal hover:text-terracotta transition-colors underline"
+              >
+                Abrir en Google Maps →
+              </a>
+            </div>
+          </div>
+
+          <!-- Tarjeta Visual del Mapa / Edificio -->
+          <div class="lg:col-span-7">
+            <div class="rounded-3xl overflow-hidden border border-stone-300 shadow-xl relative bg-stone-100 h-[420px]">
+              <img 
+                src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&w=1200&q=80" 
+                alt="Museo Arocena fachada e interiores históricos" 
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-charcoal/40 backdrop-blur-[1px] flex items-center justify-center p-6 text-center">
+                <div class="bg-white/95 backdrop-blur-md p-8 rounded-2xl max-w-md shadow-2xl border border-stone-200">
+                  <div class="w-12 h-12 rounded-full bg-terracotta/10 text-terracotta font-serif font-bold text-xl flex items-center justify-center mx-auto mb-3">
+                    A
+                  </div>
+                  <h3 class="font-serif text-xl font-bold text-charcoal">Museo Arocena Torreón</h3>
+                  <p class="text-xs text-stone-600 mt-2">
+                    Acceso principal por las arcadas históricas. Pregunta al personal de recepción por la mesa reservada en Arté.
+                  </p>
+                  <a 
+                    href="https://maps.google.com/?q=Museo+Arocena+Torreon" 
+                    target="_blank"
+                    class="mt-4 inline-block px-5 py-2 rounded-full bg-charcoal text-white text-xs font-semibold hover:bg-terracotta transition-colors shadow"
+                  >
+                    Cómo Llegar con GPS
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECCIÓN 10: FAQ (Preguntas Frecuentes)
+         ======================================================================== -->
+    <section id="faq" class="py-24 bg-white border-t border-stone-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs uppercase tracking-widest text-terracotta font-semibold">Resolución de Dudas</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal mt-2">
+            Preguntas Frecuentes
+          </h2>
+          <p class="text-stone-600 mt-2 text-sm">
+            Todo lo que necesitas saber antes de tu primera visita a Arté.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          
+          <!-- Columna Izquierda: Tarjeta Visual Concierge con Imagen -->
+          <div class="lg:col-span-4 rounded-3xl overflow-hidden border border-stone-200 shadow-xl relative bg-charcoal text-white min-h-[380px] flex flex-col justify-end p-8 group">
+            <img 
+              src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&w=800&q=80" 
+              alt="Salas de arte y concierge del Museo Arocena" 
+              class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" 
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-transparent"></div>
+            <div class="relative z-10">
+              <span class="text-[10px] text-gold uppercase tracking-widest font-bold px-2.5 py-1 rounded bg-gold/15 border border-gold/30">
+                Atención al Visitante
+              </span>
+              <h3 class="font-serif text-2xl font-bold mt-3 text-white leading-snug">
+                ¿Tienes alguna duda sobre tu visita?
+              </h3>
+              <p class="text-xs text-stone-300 mt-2 leading-relaxed">
+                Nuestro equipo de hospitalidad está a tu disposición para coordinar requerimientos dietéticos, mesas privadas o aniversarios.
+              </p>
+              <a 
+                href="https://wa.me/528711234567?text=Hola,%20tengo%20una%20duda%20sobre%20mi%20visita%20a%20Art%C3%A9" 
+                target="_blank" 
+                class="mt-5 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-charcoal font-bold text-xs uppercase tracking-wider hover:bg-terracotta hover:text-white transition-colors shadow-md"
+              >
+                <span>Chatear en WhatsApp</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Acordeón FAQ -->
+          <div class="lg:col-span-8 space-y-4">
+          
+          <div class="faq-item border border-stone-200 rounded-2xl p-6 bg-canvas">
+            <button type="button" class="faq-toggle w-full flex items-center justify-between text-left font-serif text-lg font-bold text-charcoal focus:outline-none">
+              <span>¿Necesito comprar una entrada al museo para visitar el restaurante?</span>
+              <svg class="faq-icon w-5 h-5 text-terracotta transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-content text-sm text-stone-600 mt-3 leading-relaxed">
+              No es obligatorio. Puedes acudir exclusivamente a disfrutar del restaurante, bar o terraza de Arté sin costo de entrada al museo. Sin embargo, te sugerimos nuestros <strong>Paquetes Especiales</strong> que incluyen la entrada a las galerías y exposiciones por una tarifa preferencial combinada.
+            </div>
+          </div>
+
+          <div class="faq-item border border-stone-200 rounded-2xl p-6 bg-canvas">
+            <button type="button" class="faq-toggle w-full flex items-center justify-between text-left font-serif text-lg font-bold text-charcoal focus:outline-none">
+              <span>¿Cada cuánto tiempo cambian los platillos del menú?</span>
+              <svg class="faq-icon w-5 h-5 text-terracotta transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-content text-sm text-stone-600 mt-3 leading-relaxed">
+              Nuestra carta cuenta con una selección de platillos insignia permanentes y un bloque rotativo de temporada que se transforma cada 3 a 4 meses, sincronizado con la llegada de las exposiciones de arte temporales nacionales e internacionales al Museo Arocena.
+            </div>
+          </div>
+
+          <div class="faq-item border border-stone-200 rounded-2xl p-6 bg-canvas">
+            <button type="button" class="faq-toggle w-full flex items-center justify-between text-left font-serif text-lg font-bold text-charcoal focus:outline-none">
+              <span>¿Cómo se confirma mi reservación?</span>
+              <svg class="faq-icon w-5 h-5 text-terracotta transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-content text-sm text-stone-600 mt-3 leading-relaxed">
+              Al llenar el formulario, se genera una solicitud preliminar con código de folio. Nuestro equipo de concierge te enviará un mensaje directo vía WhatsApp o llamada para confirmar la disponibilidad exacta de mesa y horario.
+            </div>
+          </div>
+
+          <div class="faq-item border border-stone-200 rounded-2xl p-6 bg-canvas">
+            <button type="button" class="faq-toggle w-full flex items-center justify-between text-left font-serif text-lg font-bold text-charcoal focus:outline-none">
+              <span>¿Cuentan con opciones vegetarianas o sin gluten?</span>
+              <svg class="faq-icon w-5 h-5 text-terracotta transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-content text-sm text-stone-600 mt-3 leading-relaxed">
+              Sí. Cada temporada incluye entradas, platos fuertes y postres diseñados para opciones vegetarianas, veganas y libres de gluten debidamente identificados en la carta.
+            </div>
+          </div>
+
+          <div class="faq-item border border-stone-200 rounded-2xl p-6 bg-canvas">
+            <button type="button" class="faq-toggle w-full flex items-center justify-between text-left font-serif text-lg font-bold text-charcoal focus:outline-none">
+              <span>¿Cuál es el código de vestimenta sugerido?</span>
+              <svg class="faq-icon w-5 h-5 text-terracotta transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="faq-content text-sm text-stone-600 mt-3 leading-relaxed">
+              El estilo es <em>Smart Casual</em> (casual sofisticado). Invitamos a nuestros comensales a vestirse con comodidad elegante para disfrutar tanto de las salas del museo como de la velada en el restaurante.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="bg-charcoal text-stone-400 py-16 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-stone-800">
+        
+        <!-- Brand column -->
+        <div class="space-y-4">
+          <div class="font-serif text-2xl font-bold text-canvas flex items-center gap-2">
+            ARTÉ
+            <span class="text-[10px] tracking-widest text-gold font-sans uppercase border border-gold/40 px-1.5 py-0.5 rounded">Torreón</span>
+          </div>
+          <p class="text-xs text-stone-400 leading-relaxed">
+            Restaurante interactivo concebido dentro del Museo Arocena. Gastronomía, arte y cultura en un mismo lugar.
+          </p>
+          <div class="flex items-center gap-4 text-canvas text-sm pt-2">
+            <a href="#" class="hover:text-gold transition-colors">Instagram</a>
+            <a href="#" class="hover:text-gold transition-colors">TikTok</a>
+            <a href="#" class="hover:text-gold transition-colors">Facebook</a>
+          </div>
+        </div>
+
+        <!-- Links Rápidos -->
+        <div>
+          <h4 class="text-xs font-semibold text-canvas uppercase tracking-wider mb-4">Navegación</h4>
+          <ul class="text-xs space-y-2.5">
+            <li><a href="#concepto" class="hover:text-canvas transition-colors">El Concepto</a></li>
+            <li><a href="#experiencia" class="hover:text-canvas transition-colors">Pilares Sensoriales</a></li>
+            <li><a href="#menu" class="hover:text-canvas transition-colors">Menú de Temporada</a></li>
+            <li><a href="#eventos" class="hover:text-canvas transition-colors">Eventos & Jazz</a></li>
+            <li><a href="#paquetes" class="hover:text-canvas transition-colors">Paquetes Museo + Mesa</a></li>
+          </ul>
+        </div>
+
+        <!-- Museo Arocena info -->
+        <div>
+ 
